@@ -1,0 +1,9 @@
+[caps]
+platformName = "Android"
+deviceName = "Nexus 5X"
+appActivity = "com.android.calculator2.Calculator"
+appPackage = "com.android.calculator2"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false
