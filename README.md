@@ -10,7 +10,7 @@ Follow this [instructions](http://appium.io/docs/en/about-appium/getting-started
 All these commands are done from a terminal window.  If you've already done
 a step, you can safely ignore that command.
 
-Open this directory:  `cd APPIUM-LOCATION/sample-code/examples/ruby`
+Open this directory:  `cd calculator_bdd`
 
 Install Ruby:  `\curl -L https://get.rvm.io | bash -s stable --ruby`
 
@@ -32,5 +32,5 @@ This only need to do once `bundle install`
 
 To run the test suite, enter `bundle exec cucumber`
 
-**Note** This code has been tested on emulator device Nexus_5X_API_27 (Android 8.1)
-Well, I don't have enough time to test on others :(
+**Note** This code has been tested on emulator device Nexus_5X_API_27 (Android 8.1). Appium 1.9.1 on MAC OSX 10.14
+ I don't have enough time to test on others :(
