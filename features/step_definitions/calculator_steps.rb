@@ -34,6 +34,10 @@ When /^I input ([^"]*)$/ do |data|
   main_page.click_button buttons
 end
 
+When /^I click the delete button$/ do
+  main_page.click_button ['delete']
+end
+
 When /^I put the app to background for ([^"]*) seconds$/ do |time|
   @result_text = main_page.result_text
   $driver.background_app(time.to_i)
@@ -43,7 +47,7 @@ When /^I open advance calculation screen/ do
   main_page.navigate_to_advance_page
 end
 
-Then /^I should see the correct ([^"]*) of input calculation on the screen$/ do |result|
+Then /^I should see the number ([^"]*) as correct result of input calculation on the screen$/ do |result|
   expect(main_page.result_text).to eq result
 end
 

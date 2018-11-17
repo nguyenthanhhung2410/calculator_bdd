@@ -43,19 +43,27 @@ Feature: Calculator basic functions
   Scenario Outline: Simple Calculations
     Given I have a clear screen
     When I input <calculation>
-    Then I should see the correct <result> of input calculation on the screen
+    Then I should see the number <result> as correct result of input calculation on the screen
     Examples:
       | calculation | result |
       | 2x2+4:5     | 4.8    |
       | 2x2+4x3     | 16     |
       | 12x2+4x30   | 144    |
+      | 3.0:6+0.2   | 0.7    |
 
   Scenario: App must remain status after putting to background
     Given I have a clear screen
     When I input 10 - 5
-    Then I should see the correct 5 of input calculation on the screen
+    Then I should see the number 5 as correct result of input calculation on the screen
     When I put the app to background for 10 seconds
     Then I should see the app status remained the same
+
+  Scenario: Delete button will delete the last input number
+    Given I have a clear screen
+    When I input 100 + 50
+    Then I should see the number 150 as correct result of input calculation on the screen
+    When I click the delete button
+    Then I should see the number 105 as correct result of input calculation on the screen
 
   Scenario: Open Advance Calculations
     Given I have a clear screen

@@ -38,6 +38,10 @@ module Pages
         id('com.android.calculator2:id/eq')
       end
 
+      def delete_button
+        id('com.android.calculator2:id/del')
+      end
+
       def result_text
         id('com.android.calculator2:id/result').text
       end
@@ -69,6 +73,8 @@ module Pages
             div_button.click
           when '.'
             dec_point_button.click
+          when 'delete'
+            delete_button.click
           else
             number_button(button).click
           end
